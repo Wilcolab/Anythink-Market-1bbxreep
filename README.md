@@ -1,6 +1,6 @@
 # Node.js Server
 
-This project now contains a Node.js server implemented with Express.js, replacing the previous FastAPI Python server. The server provides two routes for managing a task list.
+This project now contains a Node.js server implemented with Express.js, replacing the previous FastAPI Python server. The server provides two routes for managing a task list and runs on port **8001** by default.
 
 ## Migration Details
 
@@ -30,7 +30,12 @@ To run the Node.js server using Docker, follow these steps:
 
   This command will build the Docker image for the Node.js server and start the containers defined in the `docker-compose.yml` file.
 
-- The Node.js server should now be running. You can access it at port `8000`.
+- The Node.js server should now be running and accessible at [http://localhost:8001](http://localhost:8001).
+
+## Ports
+
+- The Node.js server listens on **port 8001** by default.
+- If you modify the port in the source code or Docker configuration, update your requests accordingly.
 
 ## API Routes
 
@@ -39,3 +44,4 @@ The Node.js server provides the following API routes:
 - `POST /tasks`: Adds a task to the task list. The request body should contain the task details.
 
 - `GET /tasks`: Retrieves the task list.
+
