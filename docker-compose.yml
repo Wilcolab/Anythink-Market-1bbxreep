@@ -7,3 +7,14 @@ services:
       - 8000:8000
     volumes:
       - ./python-server/src:/app/src
+
+  node-server:
+    build:
+      context: ./simple-express-server
+      dockerfile: Dockerfile
+    ports:
+      - 8001:8001
+    # Remove or comment out the following line:
+    # volumes:
+    #   - ./simple-express-server:/usr/src/app
+    command: ["yarn", "start"]
